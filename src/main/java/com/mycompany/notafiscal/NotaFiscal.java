@@ -4,6 +4,7 @@
 
 package com.mycompany.notafiscal;
 
+import com.mycompany.View.TelaPrincipal;
 import javax.swing.SwingUtilities;
 
 /**
@@ -14,7 +15,7 @@ public class NotaFiscal {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new Form1().setVisible(true);
+            new TelaPrincipal().setVisible(true);
         });
         
     }
