@@ -89,8 +89,4 @@ public class TelaGerarNotaFiscalVenda extends ViewBase {
 
         add(splitPane, BorderLayout.CENTER);
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new TelaGerarNotaFiscalVenda().setVisible(true));
-    }
 }

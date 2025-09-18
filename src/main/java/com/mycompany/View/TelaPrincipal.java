@@ -61,8 +61,4 @@ public class TelaPrincipal extends ViewBase {
         add(menuSuperior, BorderLayout.NORTH);
         add(painelCentral, BorderLayout.CENTER);
     }
-
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new TelaPrincipal().setVisible(true));
-    }
 }

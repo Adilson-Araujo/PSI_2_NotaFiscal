@@ -293,38 +293,7 @@ public class TelaCadastroVenda extends ViewBase {
         double total = valorProdutos + frete + seguro + ipi + icms + icmsst - desconto;
         txtValorTotalNF.setText(format(total));
     }
-
-    // ===================== Utilitários =====================
-    private GridBagConstraints baseGbc() {
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(6, 6, 6, 6);
-        gbc.anchor = GridBagConstraints.NORTHWEST; // esquerda/topo
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.weightx = 1.0;
-        return gbc;
-    }
-
-    private void addField(JPanel p, GridBagConstraints gbc, int y, String label, JTextField field) {
-        gbc.gridy = y; gbc.gridx = 0; gbc.weightx = 0;
-        p.add(new LabelBase(label), gbc);
-        gbc.gridx = 1; gbc.weightx = 1.0;
-        field.setPreferredSize(new Dimension(260, 26));
-        p.add(field, gbc);
-    }
     
-    private void addDateField(JPanel p, GridBagConstraints gbc, int y, String label, JDateChooser field) {
-        gbc.gridy = y; gbc.gridx = 0; gbc.weightx = 0;
-        p.add(new LabelBase(label), gbc);
-        gbc.gridx = 1; gbc.weightx = 1.0;
-        field.setPreferredSize(new Dimension(260, 26));
-        p.add(field, gbc);
-    }
-
-    private void addTopGlue(JPanel p, GridBagConstraints gbc, int y) {
-        gbc.gridx = 0; gbc.gridy = y; gbc.weighty = 1.0; gbc.fill = GridBagConstraints.BOTH;
-        p.add(Box.createVerticalGlue(), gbc);
-    }
-
     private void limparCamposProduto() {
         txtProdCodigo.setText("");
         txtProdDescricao.setText("");
@@ -344,23 +313,6 @@ public class TelaCadastroVenda extends ViewBase {
         for (JTextField f : fields) {
             f.getDocument().addDocumentListener(dl);
         }
-    }
-
-    private static double parseDouble(String s) {
-        try {
-            return Double.parseDouble(s.replace(" ", "").replace(',', '.'));
-        } catch (Exception e) {
-            return 0.0;
-        }
-    }
-
-    private static String format(double v) {
-        return String.format("%.2f", v);
-    }
-
-    // ===================== Main =====================
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new TelaCadastroVenda().setVisible(true));
     }
 }
 
