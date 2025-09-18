@@ -28,7 +28,7 @@ public class ViewBase extends JFrame {
 
     public void addField(JPanel p, GridBagConstraints gbc, int y, String label, JTextField field) {
         gbc.gridy = y; gbc.gridx = 0; gbc.weightx = 0;
-        p.add(new LabelBase(label), gbc);
+        p.add(new Label(label), gbc);
         gbc.gridx = 1; gbc.weightx = 1.0;
         field.setPreferredSize(new Dimension(260, 26));
         p.add(field, gbc);
@@ -36,7 +36,7 @@ public class ViewBase extends JFrame {
     
     public void addDateField(JPanel p, GridBagConstraints gbc, int y, String label, JDateChooser field) {
         gbc.gridy = y; gbc.gridx = 0; gbc.weightx = 0;
-        p.add(new LabelBase(label), gbc);
+        p.add(new Label(label), gbc);
         gbc.gridx = 1; gbc.weightx = 1.0;
         field.setPreferredSize(new Dimension(260, 26));
         p.add(field, gbc);

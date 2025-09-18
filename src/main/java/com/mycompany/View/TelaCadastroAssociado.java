@@ -1,8 +1,8 @@
 package com.mycompany.View;
 
-import com.mycompany.View.ClassesBase.LabelBase;
+import com.mycompany.View.ClassesBase.Label;
 import com.mycompany.View.ClassesBase.ViewBase;
-import com.mycompany.View.ClassesBase.ButtonBase;
+import com.mycompany.View.ClassesBase.Button;
 import javax.swing.*;
 import java.awt.*;
 
@@ -101,7 +101,7 @@ public class TelaCadastroAssociado extends ViewBase {
         addField(p, gbc, 4, "PAA:", txtPaa);
         addField(p, gbc, 5, "PNAE:", txtPnae);
 
-        ButtonBase btnSalvar = new ButtonBase("Salvar Associado");
+        Button btnSalvar = new Button("Salvar Associado");
         gbc.gridx = 1;
         gbc.gridy = 6;
         gbc.anchor = GridBagConstraints.WEST;

@@ -2,7 +2,7 @@ package com.mycompany.View;
 
 import com.mycompany.View.ClassesBase.PaletaCores;
 import com.mycompany.View.ClassesBase.ViewBase;
-import com.mycompany.View.ClassesBase.ButtonBase;
+import com.mycompany.View.ClassesBase.Button;
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
@@ -25,11 +25,11 @@ public class TelaPrincipal extends ViewBase {
         var tamanhoHeader = new Dimension(1200, 100);
         menuSuperior.setPreferredSize(tamanhoHeader);
         
-        var btnCadastroVenda = new ButtonBase("Cadastro de Venda");
-        var btnGerarNfVenda = new ButtonBase("Gerar NF de Venda");
-        var btnCadastrarAssociado = new ButtonBase("Cadastrar Associado");
+        var btnCadastroVenda = new Button("Cadastro de Venda");
+        var btnGerarNfVenda = new Button("Gerar NF de Venda");
+        var btnCadastrarAssociado = new Button("Cadastrar Associado");
         
-        var botoes = new ArrayList<ButtonBase>();
+        var botoes = new ArrayList<Button>();
         botoes.add(btnCadastrarAssociado);
         botoes.add(btnCadastroVenda);
         botoes.add(btnGerarNfVenda);

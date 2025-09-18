@@ -1,7 +1,7 @@
 package com.mycompany.View;
 
-import com.mycompany.View.ClassesBase.LabelBase;
-import com.mycompany.View.ClassesBase.ButtonBase;
+import com.mycompany.View.ClassesBase.Label;
+import com.mycompany.View.ClassesBase.Button;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -12,7 +12,7 @@ public class TelaSelecionarProdutoImportar extends JDialog {
     private JTable tabelaProdutos;
     private DefaultTableModel modeloProdutos;
     private JTextField txtQuantidade;
-    private ButtonBase btnImportar, btnCancelar;
+    private Button btnImportar, btnCancelar;
 
     // Produto selecionado (para o mock funcionar)
     private String produtoSelecionado;
@@ -44,12 +44,12 @@ public class TelaSelecionarProdutoImportar extends JDialog {
         JScrollPane scroll = new JScrollPane(tabelaProdutos);
 
         JPanel bottomPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        bottomPanel.add(new LabelBase("Quantidade:"));
+        bottomPanel.add(new Label("Quantidade:"));
         txtQuantidade = new JTextField("1", 6);
         bottomPanel.add(txtQuantidade);
 
-        btnImportar = new ButtonBase("Importar Selecionado");
-        btnCancelar = new ButtonBase("Cancelar");
+        btnImportar = new Button("Importar Selecionado");
+        btnCancelar = new Button("Cancelar");
         bottomPanel.add(btnImportar);
         bottomPanel.add(btnCancelar);
 

@@ -1,8 +1,8 @@
 package com.mycompany.View;
 
-import com.mycompany.View.ClassesBase.LabelBase;
+import com.mycompany.View.ClassesBase.Label;
 import com.mycompany.View.ClassesBase.ViewBase;
-import com.mycompany.View.ClassesBase.ButtonBase;
+import com.mycompany.View.ClassesBase.Button;
 import com.toedter.calendar.JDateChooser;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
@@ -12,7 +12,7 @@ public class TelaGerarNotaFiscalVenda extends ViewBase {
 
     private JComboBox<String> cbAssociado;
     private JDateChooser dtInicial, dtFinal;
-    private ButtonBase btnBuscar, btnGerarNFE;
+    private Button btnBuscar, btnGerarNFE;
     private JTable tabelaVendas;
     private DefaultTableModel modeloTabela;
 
@@ -44,21 +44,21 @@ public class TelaGerarNotaFiscalVenda extends ViewBase {
         dtFinal = new JDateChooser();
         dtFinal.setDateFormatString("dd/MM/yyyy");
 
-        btnBuscar = new ButtonBase("Buscar");
+        btnBuscar = new Button("Buscar");
 
         // Layout
         c.gridx = 0; c.gridy = 0;
-        painelEsquerdo.add(new LabelBase("Associado:"), c);
+        painelEsquerdo.add(new Label("Associado:"), c);
         c.gridx = 1;
         painelEsquerdo.add(cbAssociado, c);
 
         c.gridx = 0; c.gridy = 1;
-        painelEsquerdo.add(new LabelBase("Data Inicial:"), c);
+        painelEsquerdo.add(new Label("Data Inicial:"), c);
         c.gridx = 1;
         painelEsquerdo.add(dtInicial, c);
 
         c.gridx = 0; c.gridy = 2;
-        painelEsquerdo.add(new LabelBase("Data Final:"), c);
+        painelEsquerdo.add(new Label("Data Final:"), c);
         c.gridx = 1;
         painelEsquerdo.add(dtFinal, c);
 
@@ -78,7 +78,7 @@ public class TelaGerarNotaFiscalVenda extends ViewBase {
 
         JScrollPane scroll = new JScrollPane(tabelaVendas);
 
-        btnGerarNFE = new ButtonBase("Gerar NFE");
+        btnGerarNFE = new Button("Gerar NFE");
 
         painelDireito.add(scroll, BorderLayout.CENTER);
         painelDireito.add(btnGerarNFE, BorderLayout.SOUTH);

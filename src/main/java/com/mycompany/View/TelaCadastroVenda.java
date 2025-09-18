@@ -1,8 +1,8 @@
 package com.mycompany.View;
 
-import com.mycompany.View.ClassesBase.LabelBase;
+import com.mycompany.View.ClassesBase.Label;
 import com.mycompany.View.ClassesBase.ViewBase;
-import com.mycompany.View.ClassesBase.ButtonBase;
+import com.mycompany.View.ClassesBase.Button;
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
@@ -71,7 +71,7 @@ public class TelaCadastroVenda extends ViewBase {
         addField(p, gbc, 4, "Natureza da Operação:", txtNatOper);
         txtSerie.setText("001");
 
-        ButtonBase btnGerar = new ButtonBase("Gerar Novo");
+        Button btnGerar = new Button("Gerar Novo");
         gbc.gridx = 2;
         gbc.gridy = 0;
         p.add(btnGerar, gbc);
@@ -103,12 +103,12 @@ public class TelaCadastroVenda extends ViewBase {
         addField(p, gbc, 6, "Rua:", txtEmitRua);
         addField(p, gbc, 7, "Número:", txtEmitNumero);
 
-        ButtonBase btnSalvar = new ButtonBase("Salvar Emitente");
+        Button btnSalvar = new Button("Salvar Emitente");
         gbc.gridx = 0;
         gbc.gridy = 8;
         p.add(btnSalvar, gbc);
 
-        ButtonBase btnImportar = new ButtonBase("Importar Emitente");
+        Button btnImportar = new Button("Importar Emitente");
         gbc.gridx = 1;
         gbc.gridy = 8;
         p.add(btnImportar, gbc);
@@ -138,12 +138,12 @@ public class TelaCadastroVenda extends ViewBase {
         addField(p, gbc, 5, "Rua:", txtDestRua);
         addField(p, gbc, 6, "Número:", txtDestNumero);
 
-        ButtonBase btnSalvar = new ButtonBase("Salvar Destinatário");
+        Button btnSalvar = new Button("Salvar Destinatário");
         gbc.gridx = 0;
         gbc.gridy = 7;
         p.add(btnSalvar, gbc);
 
-        ButtonBase btnImportar = new ButtonBase("Importar Destinatário");
+        Button btnImportar = new Button("Importar Destinatário");
         gbc.gridx = 1;
         gbc.gridy = 7;
         p.add(btnImportar, gbc);
@@ -159,7 +159,7 @@ public class TelaCadastroVenda extends ViewBase {
         JPanel form = new JPanel(new GridBagLayout());
         GridBagConstraints gbc = baseGbc();
 
-        ButtonBase btnImportar = new ButtonBase("Importar Produto");
+        Button btnImportar = new Button("Importar Produto");
         gbc.gridx = 0;
         gbc.gridy = 6;
         form.add(btnImportar, gbc);
@@ -233,7 +233,7 @@ public class TelaCadastroVenda extends ViewBase {
         addField(p, gbc, 8, "IPI:", txtVlrIPI);
         addField(p, gbc, 9, "Total NF:", txtValorTotalNF);
 
-        ButtonBase btnSalvar = new ButtonBase("Salvar Nota Fiscal");
+        Button btnSalvar = new Button("Salvar Nota Fiscal");
         gbc.gridx = 1; gbc.gridy = 10;
         p.add(btnSalvar, gbc);
 
